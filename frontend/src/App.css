@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+.app {
+  display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1b5e20 0%, #2e7d32 100%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 25px 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 6px 0 20px rgba(0,0,0,.15);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    font-size:32px;
+    font-weight:700;
+    color:white;
+    margin-bottom:45px;
+}
+
+.logo span{
+    color:white;
+}
+
+/* Navigation */
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* Remove default link style */
+
+.sidebar nav a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Menu Item */
+
+.nav-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:16px 18px;
+    border-radius:14px;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-item svg{
+    font-size:22px;
+}
+
+.nav-item:hover{
+    background:rgba(255,255,255,.18);
+    transform:translateX(8px);
+}
+
+.nav-item.active{
+    background:white;
+    color:#2e7d32;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* Logout */
+
+.logout-btn{
+    margin-top:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:15px;
+    border:none;
+    border-radius:14px;
+
+    background:#ef5350;
+    color:white;
+
+    font-size:17px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#d32f2f;
+}
+
+/* ================= MAIN ================= */
+
+.main {
+  flex: 1;
+  margin-left: 260px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 80px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.navbar h2 {
+  color: #2e7d32;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.navbar p {
+  color: #777;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-icon {
+  font-size: 22px;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.nav-icon:hover {
+  transform: scale(1.15);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f5f7;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.profile svg {
+  font-size: 22px;
+  color: #2e7d32;
+}
+
+/* ================= CARDS ================= */
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 34px;
+}
+
+/* ================= FORM ================= */
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #256428;
+}
+
+/* ================= TABLE ================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #2e7d32;
+  color: white;
+}
+
+th,
+td {
+  padding: 14px;
+  border: 1px solid #eee;
+}
