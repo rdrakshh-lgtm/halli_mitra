@@ -1,0 +1,65 @@
+.users-page{
+    padding:30px;
+}
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.page-header h2{
+    color:#184D3B;
+}
+
+.page-header input{
+    width:260px;
+    padding:10px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+.users-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.users-table th{
+    background:#184D3B;
+    color:#fff;
+    padding:15px;
+}
+
+.users-table td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.users-table tr:hover{
+    background:#f8f8f8;
+}
+
+.edit-btn{
+    background:#22c55e;
+    color:#fff;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-right:10px;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}

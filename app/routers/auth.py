@@ -42,7 +42,8 @@ def register(user: UserRegister, db: Session = Depends(get_db)):
             mobile=user.mobile,
             password=hash_password(user.password),
             sponsor_code=user.sponsor_code,
-            referral_code=generate_referral()
+            referral_code=generate_referral(),
+            role="user"
         )
 
         db.add(new_user)
@@ -85,5 +86,6 @@ def login(user: LoginRequest, db: Session = Depends(get_db)):
 
     return {
     "access_token": token,
-    "token_type": "bearer"
+    "token_type": "bearer",
+    "role": db_user.role,
 }

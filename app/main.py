@@ -18,7 +18,10 @@ from app.routers.dashboard import router as dashboard_router
 from app.models.notification import Notification
 from app.routers.notification import router as notification_router
 from fastapi.middleware.cors import CORSMiddleware
-
+from app.routers import translator
+from app.routers import contact
+from app.routers.settings import router as settings_router
+from app.routers.contact import router as contact_router
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -49,6 +52,9 @@ app.include_router(upload_router)
 app.include_router(disease_router)
 app.include_router(dashboard_router)
 app.include_router(notification_router)
+app.include_router(translator.router)
+app.include_router(contact.router)
+app.include_router(settings_router)
 
 Base.metadata.create_all(bind=engine)
 

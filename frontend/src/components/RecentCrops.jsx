@@ -1,51 +1,36 @@
-import {
-  Card,
-  CardContent,
-  Typography,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-} from "@mui/material";
-
 const RecentCrops = ({ crops }) => {
   return (
-    <Card elevation={4} sx={{ borderRadius: 3 }}>
-      <CardContent>
-        <Typography variant="h6" gutterBottom>
-          🌱 Recent Crops
-        </Typography>
+    <div className="card">
+      <h2>🌱 Recent Crops</h2>
 
-        <Table size="small">
-          <TableHead>
-            <TableRow>
-              <TableCell><b>Crop</b></TableCell>
-              <TableCell><b>Variety</b></TableCell>
-              <TableCell><b>Season</b></TableCell>
-            </TableRow>
-          </TableHead>
+      <table style={{ width: "100%", marginTop: 20 }}>
+        <thead>
+          <tr>
+            <th>Crop</th>
+            <th>Variety</th>
+            <th>Season</th>
+          </tr>
+        </thead>
 
-          <TableBody>
-            {crops.length > 0 ? (
-              crops.map((crop, index) => (
-                <TableRow key={index}>
-                  <TableCell>{crop.crop_name}</TableCell>
-                  <TableCell>{crop.variety}</TableCell>
-                  <TableCell>{crop.season}</TableCell>
-                </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableCell colSpan={3} align="center">
-                  No crops found
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </CardContent>
-    </Card>
+        <tbody>
+          {crops.length > 0 ? (
+            crops.map((crop, index) => (
+              <tr key={index}>
+                <td>{crop.crop_name}</td>
+                <td>{crop.variety}</td>
+                <td>{crop.season}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="3" style={{ textAlign: "center" }}>
+                No crops found
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

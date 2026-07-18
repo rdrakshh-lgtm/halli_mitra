@@ -1,0 +1,26 @@
+{
+  "appName": "Halli Mitra",
+
+  "home": "Home",
+  "about": "About",
+  "features": "Features",
+  "services": "Services",
+  "contact": "Contact",
+  "login": "Login",
+  "signup": "Sign Up",
+
+  "heroTitle": "Smart Farming Powered by AI",
+  "heroDescription": "Halli Mitra helps farmers manage crops, predict diseases, check weather forecasts, monitor market prices, and receive AI-powered farming guidance.",
+
+  "getStarted": "Get Started",
+  "learnMore": "Learn More",
+
+  "dashboard": "Dashboard",
+  "weather": "Weather",
+  "marketPrices": "Market Prices",
+  "cropManagement": "Crop Management",
+  "aiAssistant": "AI Assistant",
+  "profile": "Profile",
+
+  "footerText": "Empowering farmers through Artificial Intelligence."
+}

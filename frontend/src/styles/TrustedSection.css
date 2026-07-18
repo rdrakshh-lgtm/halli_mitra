@@ -1,0 +1,54 @@
+.trusted{
+    padding:100px 80px;
+    text-align:center;
+    background:#ffffff;
+}
+
+.trusted h2{
+    font-size:48px;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.trusted p{
+    max-width:750px;
+    margin:auto;
+    color:#666;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.trusted-grid{
+    margin-top:60px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+}
+
+.trusted-card{
+    background:#f8fbf7;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.trusted-card:hover{
+    transform:translateY(-8px);
+}
+
+.trusted-card h1{
+    color:#2E7D32;
+    font-size:42px;
+}
+
+.trusted-card span{
+    color:#666;
+    font-size:18px;
+}

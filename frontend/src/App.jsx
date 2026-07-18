@@ -1,36 +1,42 @@
 import { Routes, Route } from "react-router-dom";
 
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
-
-import Dashboard from "./pages/Dashboard";
-import CropManagement from "./pages/CropManagement";
-import Weather from "./pages/Weather";
-import MarketPrices from "./pages/MarketPrices";
-import AIAssistant from "./pages/AIAssistant";
-import Profile from "./pages/Profile";
-
 import "./App.css";
+
+// Public Pages
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Features from "./pages/Features";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import AdminLogin from "./pages/AdminLogin";
+
+// Layouts
+import UserLayout from "./layouts/UserLayout";
+import AdminLayout from "./layouts/AdminLayout";
+import Settings from "./pages/admin/Settings";
 
 function App() {
   return (
-    <div className="app">
-      <Sidebar />
+    <Routes>
+      {/* Public */}
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/features" element={<Features />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/admin-login" element={<AdminLogin />} />
 
-      <div className="main">
-        <Navbar />
+      {/* User */}
+      <Route path="/user/*" element={<UserLayout />} />
 
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/crops" element={<CropManagement />} />
-          <Route path="/weather" element={<Weather />} />
-          <Route path="/market" element={<MarketPrices />} />
-          <Route path="/ai" element={<AIAssistant />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </div>
-    </div>
+      {/* Admin */}
+      <Route path="/admin/*" element={<AdminLayout />} />
+      <Route path="/admin/settings" element={<Settings />} />
+    </Routes>
   );
 }
 

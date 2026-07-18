@@ -1,18 +1,36 @@
-import { Card, CardContent, Typography } from "@mui/material";
-
-const RecentFarmers = () => {
+const RecentFarmers = ({ farmers }) => {
   return (
-    <Card elevation={4} sx={{ borderRadius: 3 }}>
-      <CardContent>
-        <Typography variant="h6">
-          👨‍🌾 Recent Farmers
-        </Typography>
+    <div className="card">
+      <h2>👨‍🌾 Recent Farmers</h2>
 
-        <Typography sx={{ mt: 2 }}>
-          Recent farmer registrations will appear here.
-        </Typography>
-      </CardContent>
-    </Card>
+      <table style={{ width: "100%", marginTop: 20 }}>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Village</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {farmers.length > 0 ? (
+            farmers.map((farmer, index) => (
+              <tr key={index}>
+                <td>{farmer.name}</td>
+                <td>{farmer.phone}</td>
+                <td>{farmer.village}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="3" style={{ textAlign: "center" }}>
+                No farmers found
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
   );
 };
 

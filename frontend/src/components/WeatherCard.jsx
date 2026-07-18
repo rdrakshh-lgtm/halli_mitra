@@ -1,28 +1,37 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import api from "../services/api";
 
 const WeatherCard = () => {
+  const [weather, setWeather] = useState(null);
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const res = await api.get("/weather/Mysuru");
+        setWeather(res.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchWeather();
+  }, []);
+
   return (
-    <Card elevation={4} sx={{ borderRadius: 3 }}>
-      <CardContent>
-        <Typography variant="h6">🌦 Today's Weather</Typography>
+    <div className="card">
+      <h2>🌦️ Today's Weather</h2>
 
-        <Typography sx={{ mt: 2 }}>
-          🌡 Temperature: 29°C
-        </Typography>
-
-        <Typography>
-          💧 Humidity: 68%
-        </Typography>
-
-        <Typography>
-          🌬 Wind: 12 km/h
-        </Typography>
-
-        <Typography>
-          ☀️ Condition: Sunny
-        </Typography>
-      </CardContent>
-    </Card>
+      {weather ? (
+        <>
+          <h3>{weather.city}</h3>
+          <p>🌡️ Temperature: {weather.temperature}°C</p>
+          <p>💧 Humidity: {weather.humidity}%</p>
+          <p>🌥️ Condition: {weather.description}</p>
+        </>
+      ) : (
+        <p>Loading weather...</p>
+      )}
+    </div>
   );
 };
 

@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import api from "../services/api";
 import { Grid, Typography } from "@mui/material";
 
-import DashboardCard from "../components/DashboardCard";
-import WeatherCard from "../components/WeatherCard";
-import NotificationPanel from "../components/NotificationPanel";
-import RecentCrops from "../components/RecentCrops";
-import RecentFarmers from "../components/RecentFarmers";
-import AITipCard from "../components/AITipCard";
+import DashboardCard from "./DashboardCard";
+import WeatherCard from "./WeatherCard";
+import NotificationPanel from "./NotificationPanel";
+import RecentCrops from "./RecentCrops";
+import RecentFarmers from "./RecentFarmers";
+import AITipCard from "./AITipCard";
 
 const Dashboard = () => {
   const [stats, setStats] = useState({

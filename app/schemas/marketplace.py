@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-
 class MarketplaceCreate(BaseModel):
     farmer_id: int
     crop_name: str
@@ -8,6 +7,7 @@ class MarketplaceCreate(BaseModel):
     price: float
     location: str
     contact: str
+    image: str | None = None
 
 
 class MarketplaceResponse(MarketplaceCreate):

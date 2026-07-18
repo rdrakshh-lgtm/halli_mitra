@@ -11,5 +11,8 @@ router = APIRouter(
 
 @router.post("/chat", response_model=AIResponse)
 def chat(request: AIRequest):
-    answer = get_ai_response(request.question)
+    answer = get_ai_response(
+    request.question,
+    request.language,
+)
     return AIResponse(answer=answer)
