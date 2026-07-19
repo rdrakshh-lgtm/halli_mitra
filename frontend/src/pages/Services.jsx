@@ -1,6 +1,6 @@
 import LandingNavbar from "../components/LandingNavbar";
 import Footer from "../components/Footer";
-import "../styles/Services.css";
+import "../styles/services.css";
 
 const stages = [
   {

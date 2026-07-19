@@ -1,5 +1,5 @@
 import LandingNavbar from "../components/LandingNavbar";
-import "../styles/Features.css";
+import "../styles/features.css";
 import Footer from "../components/Footer";
 
 const features = [

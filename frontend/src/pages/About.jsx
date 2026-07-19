@@ -1,5 +1,5 @@
 import LandingNavbar from "../components/LandingNavbar";
-import "../styles/About.css";
+import "../styles/about.css";
 import Footer from "../components/Footer";
 import aboutImage from "../assets/about-image.png";
 import { useNavigate } from "react-router-dom";

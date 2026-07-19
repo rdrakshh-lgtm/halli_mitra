@@ -7,7 +7,7 @@ import {
   FaSeedling,
   FaEdit,
 } from "react-icons/fa";
-import "../../styles/Profile.css";
+import "../../styles/profile.css";
 
 const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
