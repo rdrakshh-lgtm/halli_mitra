@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 
-import Sidebar from "../components/user/sidebar";
+import Sidebar from "../components/user/Sidebar";
 import Navbar from "../components/user/Navbar";
 
 import Dashboard from "../pages/user/Dashboard";
 import CropManagement from "../pages/user/CropManagement";
-import Myproducts from "../pages/user/Myproducts";
+import MyProducts from "../pages/user/MyProducts";
 import Marketplace from "../pages/user/Marketplace";
 import AIAssistant from "../pages/user/AIAssistant";
 import Profile from "../pages/user/Profile";
