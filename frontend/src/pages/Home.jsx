@@ -5,7 +5,7 @@ import DashboardPreview from "../components/DashboardPreview";
 import Footer from "../components/Footer";
 import TrustedSection from "../components/TrustedSection";
 import AIPreview from "../components/AIPreview";
-import HowItWorks from "../components/HowItWorks";
+import HowItWorks from "../components/Howitworks";
 
 
 const Home = () => {
