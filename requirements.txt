@@ -10,5 +10,6 @@ requests
 pydantic
 email-validator
 google-generativeai
+google-genai
 pillow
 pydantic-settings
