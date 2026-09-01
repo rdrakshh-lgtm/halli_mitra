@@ -11,3 +11,4 @@ pydantic
 email-validator
 google-generativeai
 pillow
+pydantic-settings
