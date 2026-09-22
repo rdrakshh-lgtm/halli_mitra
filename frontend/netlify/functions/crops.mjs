@@ -9,7 +9,11 @@ export default async (request) => {
 
     const parts = path.split("/").filter(Boolean);
 
-    const cropId = parts.length > 3 ? parts[3] : null;
+    const cropsIndex = parts.indexOf("crops");
+    const cropId =
+      cropsIndex !== -1 && parts[cropsIndex + 1]
+        ? parts[cropsIndex + 1]
+        : null;
 
     // /crops or /crops/
     connection = await mysql.createConnection(
