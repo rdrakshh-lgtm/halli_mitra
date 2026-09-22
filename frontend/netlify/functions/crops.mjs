@@ -6,11 +6,12 @@ export default async (request) => {
   try {
     const url = new URL(request.url);
     const path = url.pathname;
+
     const parts = path.split("/").filter(Boolean);
 
-    // /crops or /crops/
-    const cropId = parts.length > 2 ? parts[2] : null;
+    const cropId = parts.length > 1 ? parts[1] : null;
 
+    // /crops or /crops/
     connection = await mysql.createConnection(
       process.env.MYSQL_URL
     );
