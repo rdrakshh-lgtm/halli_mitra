@@ -21,7 +21,7 @@ const UserLayout = () => {
         <Routes>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="crops" element={<CropManagement />} />
-          <Route path="my-products" element={<Myproducts />} />
+          <Route path="my-products" element={<MyProducts />} />
           <Route path="marketplace" element={<Marketplace />} />
           <Route path="ai" element={<AIAssistant />} />
           <Route path="profile" element={<Profile />} />
