@@ -37,8 +37,9 @@ const Register = () => {
 
   try {
     const response = await axios.post(
-      "http://127.0.0.1:8000/auth/register",
+      "/.netlify/functions/auth",
       {
+        action: "register",
         full_name: formData.full_name,
         email: formData.email,
         mobile: formData.mobile,
